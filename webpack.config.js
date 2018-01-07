@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMerge = require('webpack-merge');
 const scss = require('./webpack_conf/sass');
+const css = require('./webpack_conf/css');
 
 const PATHS = {
     development: path.join(__dirname, 'Development/Component/App'),
@@ -26,12 +27,14 @@ module.exports = function (env) {
     if(env === 'production') {
         return WebpackMerge([
             common,
+            css(),
             scss()
         ])
     }
     if(env === 'development') {
         return WebpackMerge([
             common,
+            css(),
             scss()
         ])
     }
