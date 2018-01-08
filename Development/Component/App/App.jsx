@@ -1,4 +1,5 @@
 import React from 'react';
+import General from '../Sing_block/Sing_Block.jsx'
 
 
 export default class App extends React.Component {
@@ -8,7 +9,9 @@ export default class App extends React.Component {
 
     render() {
         return(
-            <h1>Hello world</h1>
+            <div className={'root'}>
+                <General/>
+            </div>
         )
     }
 }

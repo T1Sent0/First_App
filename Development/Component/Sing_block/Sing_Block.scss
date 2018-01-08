@@ -1,0 +1,35 @@
+@font-face {
+  @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.--general-block-sing {
+  position: relative;
+  left: 60%;
+  width: 30em;
+  padding: 2% 4%;
+  box-sizing: border-box;
+  box-shadow: 0.1em 0.1em 0.5em #c1c1c1;
+  font-family: 'Alegreya Sans', sans-serif;
+  letter-spacing: .1em;
+  div {
+    margin-bottom: 1.2em;
+  }
+  .registration-icon {
+    img {
+      width: 4em;
+      height: 4em;
+    }
+    img:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-bottom: .5em;
+  }
+}
