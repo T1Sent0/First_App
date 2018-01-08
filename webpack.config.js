@@ -18,7 +18,7 @@ const common = WebpackMerge([
         entry: PATHS.development + '/entry.js',
         output: {
             filename: '[name].js',
-            path: PATHS.production + 'js'
+            path: PATHS.production + 'js',
         },
         plugins: [
             new HtmlWebpackPlugin({
@@ -29,18 +29,15 @@ const common = WebpackMerge([
             //     name: 'common'
             // })
         ],
-        // devServer: {
-        //     contentBase: PATHS.production,
-        //     publicPath: PATHS.production,
-        //     historyApiFallback: true,
-        //     inline: true,
-        //     compress: true,
-        //     port: 9000,
-        //     open: true,
-        //     openPage: '',
-        //     host: 'localhost',
-        //     hot: true
-        // }
+        devServer: {
+            inline: true,
+            compress: true,
+            port: 9000,
+            open: true,
+            openPage: '',
+            host: 'localhost',
+            hot: true
+        }
     },
     images(),
     es()
